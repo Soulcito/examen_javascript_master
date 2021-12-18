@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Piedra, Papel o Tijera</title>
+</head>
+<body>
+
+  <!-- SECCION DE LOGIN -->
+
+  <div id="log" class="log-container">
+      <div class="log-image">
+          <img id="logImage" src="./assets/logo.jpg" alt="log_image">   
+      </div>
+      <div class="loging-container">
+        <div class="input">
+            <div class="input-detail">
+              <label for="user" class="ml-4">User:</label>
+              <input class="Input mr-4" type="text" id="user" name="user" placeholder="Usuario es admin">
+            </div>
+            <div class="alert ml-4 mr-4" id="alertUser">User input is required</div>
+        </div>
+        <div class="input">
+          <div class="input-detail">
+            <label for="password" class="ml-4">Password:</label>
+            <input class="Input mr-4" type="password" id="password" name="password" placeholder="Password is 123456">
+          </div>
+          <div class="alert ml-4 mr-4" id="alertPassword">Password input is required</div>
+        </div>          
+        <div class="input">
+          <div class="input-detail">
+            <button class="ml-4 mr-4" id="loginBtn" type="button" onclick="handleLogin()">Login</button>
+          </div>
+          <div class="alert ml-4 mr-4" id="userPassInvalid">User or Password are invalid</div>
+        </div>
+      </div>
+  </div>
+
+  <!-- SECCION DE JUEGO -->
+
+  <div id="play" class="container">
+     <div class="container-wrapper">
+            <h1>Comenzar</h1>
+        <div class="container-row mt-6">
+          <div class="container-col">
+             <h2>Jugador</h2>
+             <div class="container-play mt-4 mb-4">
+                <img  id="img-jugador" src="./assets/signo.png">
+             </div>
+          </div>  
+          <div class="container-col">
+             <h2>IA</h2>
+             <div class="container-play mt-4 mb-4">
+              <img  id="img-ia" src="./assets/signo.png">
+           </div>             
+          </div> 
+          <div class="container-col">
+             <h2>Puntuaciones</h2>
+             <table class="mt-4">
+               <tbody id="puntaje"></tbody>
+             </table>
+          </div>   
+        </div>    
+        <div id="msg" class="container-row mt-2">
+           <p id="message"></p>
+        </div>
+        <div class="container-row mt-4">
+           <div class="container-wrapper">
+             <h2 class="ml-6">Seleccione</h2>
+             <div class="container-row mt-4">
+                <img src="./assets/piedra_btn.png" alt="piedra_btn" class="mr-4 mt-4 mb-4 img-button" onclick="game(0)">
+                <img src="./assets/mano_btn.png" alt="mano_btn" class="mr-4 mt-4 mb-4 img-button" onclick="game(1)">
+                <img src="./assets/tijera_btn.png" alt="tijera_btn" class="mt-4 mb-4 img-button" onclick="game(2)">
+             </div>
+           </div>
+        </div>
+     </div>
+  </div>
+    <script src="./login.js"></script>
+    <script src="./index.js"></script>  
+</body>
+</html>
